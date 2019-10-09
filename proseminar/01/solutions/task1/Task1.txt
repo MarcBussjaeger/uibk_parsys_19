@@ -1,0 +1,28 @@
+- Study how to submit jobs -> Tutorial is done.
+- Submission script -> job.script
+- 5 most important parameters when submitting:
+	[-q std.q]
+		Selects which queue is used.
+		Restricts access (to nodes and runtime) for users.
+		Available queues are std.q, short.q and bigmem.q
+
+	[-cwd]
+		Execute the line in the current working directory.
+		Avoids messing paths up.
+	
+	[-m]
+		Sending mail notifications with the status to the address specified via -M.
+		Avoids long idle times if a long calculation is aborted.
+
+	[-hold_jid job-id]
+		Start a job only if the job with the given id has finished.
+		Important when jobs relie on the results of each other.
+
+	[-pe parallel-environment number-of-slots]
+		Specifies the parallel environment that is used.
+		Needed to reserve CPU cores for the job.
+		Available parallel-environments: 
+			openmpi-Xperhost (X processes per host)
+			openmpi-fillup (each available host filled up to its host process limit)
+			openmp (when working with threaded applications)
+- How to run in parallel -> job.script

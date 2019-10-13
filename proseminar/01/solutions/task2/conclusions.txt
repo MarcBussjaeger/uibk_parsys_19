@@ -1,0 +1,10 @@
+latency_measurements:
+	- linear trends
+	- small sizes lead to lower latencies for 2 sockets w.r.t 2 nodes
+	- large sizes lead to higher latencies __,,__
+	- measurements are rather constant over time
+
+bandwidth_measurements:
+	- asymptotical behaviour for 2 nodes
+	- peak for 2 sockets within about 0-2*1e6
+	- small deviations for 2 sockets over time

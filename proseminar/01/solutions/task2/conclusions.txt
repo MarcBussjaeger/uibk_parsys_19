@@ -1,10 +1,23 @@
 latency_measurements:
-	- linear trends
-	- small sizes lead to lower latencies for 2 sockets w.r.t 2 nodes
-	- large sizes lead to higher latencies __,,__
-	- measurements are rather constant over time
+	- two different nodes:
+		- linear trend
+		- constant over time
+	- two sockets one node:
+		- constant over time
+		- linear trend with one outlier at small sizes
+		- small sizes have lower latency as two nodes case,
+		  larger sizes have larger __,,__
+	- two cores one socket:
+		- similar to two socket case
+
 
 bandwidth_measurements:
-	- asymptotical behaviour for 2 nodes
-	- peak for 2 sockets within about 0-2*1e6
-	- small deviations for 2 sockets over time
+	- two different nodes:
+		- asymptotical behaviour (limit of bandwidth)
+		- constant over time except for one outlier
+	- two sockets one node:
+		- peak for around 1e6
+		- small deviations for over time
+	- two cores one socket:
+		- similar to two sockets case
+		- slightly lower bandwidths

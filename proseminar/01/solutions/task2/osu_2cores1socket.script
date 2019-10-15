@@ -16,10 +16,10 @@
 # Join the error stream to the output stream.
 #$ -j yes
 
+#$ -pe openmp 2
+
 # execute in parallel, load the required module
 module load openmpi/4.0.1
-
-#$ -pe smp 2
 
 # latency
 mpiexec -n 2 /scratch/c703429/osu-benchmark/libexec/osu-micro-benchmarks/mpi/pt2pt/osu_latency
